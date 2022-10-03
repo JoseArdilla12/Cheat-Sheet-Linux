@@ -2,7 +2,7 @@
 Comandos Utiles
 
 ## Expand LVM ###
-In Hyper-V, edit the virtual machine and go under “Hard Drive”
+Edit the virtual machine and go under “Hard Drive”
 Click on “Edit”, select “Expand” and enter the desired size
 Reboot the virtual machine
 SSH into the virtual machine
