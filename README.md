@@ -16,6 +16,7 @@ https://packetpushers.net/ubuntu-extend-your-default-lvm-space/ <br>
 
 ## Static IP Ubuntu 22.04 ##
 
+```
 network:
     ethernets:
         enp0s3:
@@ -25,4 +26,5 @@ network:
             nameservers:
               addresses: [8.8.8.8,8.8.4.4,192.168.1.1]
     version: 2
+```
 <br>
