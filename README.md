@@ -25,7 +25,7 @@ https://packetpushers.net/ubuntu-extend-your-default-lvm-space/ <br>
 ```
 network:
     ethernets:
-        enp0s3:
+        ens160:
             dhcp4: false
             addresses: [192.168.1.202/24]
             gateway4: 192.168.1.1
