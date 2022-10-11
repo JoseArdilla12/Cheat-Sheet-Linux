@@ -37,3 +37,18 @@ network:
     version: 2
 ```
 <br>
+To apply the new Netplan changes execute:
+
+```
+sudo netplan apply
+```
+
+If problems present:
+
+```
+sudo netplan --debug apply
+```
+
+<br>
+
+
