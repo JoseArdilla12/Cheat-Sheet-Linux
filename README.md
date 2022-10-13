@@ -22,19 +22,21 @@ https://packetpushers.net/ubuntu-extend-your-default-lvm-space/ <br>
 
 ## Static IP Ubuntu 22.04 ##
 
-Locate and edit with administrative privileges the */etc/netplan/01-network-manager-all.yaml* file with the following configuration.
+Locate and edit with administrative privileges the */etc/netplan/00-installer-config.yaml* file with the following configuration.
 <br>
 
 ````
 network:
-    ethernets:
-        ens160:
-            dhcp4: false
-            addresses: [192.168.1.202/24]
-            gateway4: 192.168.1.1
-            nameservers:
-              addresses: [8.8.8.8,8.8.4.4,192.168.1.1]
-    version: 2
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens160:
+      dhcp4: no
+      addresses:
+        - 10.10.9.81/24
+      gateway4: 10.10.9.1
+      nameservers:
+        addresses: [10.10.9.80]
 ````
 <br>
 
