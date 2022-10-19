@@ -30,15 +30,17 @@ network:
   version: 2
   renderer: networkd
   ethernets:
-    ens33:
+    ens160:
       dhcp4: no
       addresses:
-        - 10.0.0.236/24
+        - 10.10.9.78/24
       routes: 
       - to: default
-        via: 10.0.0.1
+        via: 10.10.9.1
       nameservers:
-        addresses: [10.0.0.250]
+        addresses: [10.0.8.15, 10.10.9.8]
+    ens192:
+      dhcp4: no
 ````
 <br>
 
