@@ -13,13 +13,22 @@ pihole -b facebook.com
 
 ## Activar/Desactivar Adlists en Crontab
 
-#Enable Block:<br>
-````
-0 13 * * * sudo sqlite3 /etc/pihole/gravity.db "update 'adlist' set 'enabled'=0 where id='13';" ; /usr/local/bin/pihole restartdns reload-lists >/dev/null
-````
-
 #Disable Block:<br>
 ````
-0 15 * * * sudo sqlite3 /etc/pihole/gravity.db "update 'adlist' set 'enabled'=1 where id='13';" ; /usr/local/bin/pihole restartdns reload-lists >/dev/null
+0 13 * * * /etc/pihole/redsocial-almuerzo.sh
+
+#!/bin/sh
+
+/usr/bin/sqlite3 /etc/pihole/gravity.db "update 'adlist' set 'enabled'=0 where id='13'; update 'adlist' set 'enabled'=0 where id='14'" ; /usr/local/bin/pihole restartdns reload-lists >/dev/null
 ````
+
+#Enable Block:<br>
+````
+0 15 * * * /etc/pihole/redsocial-block.sh
+
+#!/bin/sh
+
+/usr/bin/sqlite3 /etc/pihole/gravity.db "update 'adlist' set 'enabled'=1 where id='13'; update 'adlist' set 'enabled'=1 where id='14'" ; /usr/local/bin/pihole restartdns reload-lists >/dev/null
+````
+
 
