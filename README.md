@@ -10,10 +10,13 @@ Run sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv to extend the volume to 
 Run df -h to see the status of the filesystem free space<br>
 Grab the name of your target filesystem (typically /dev/mapper/ubuntu--vg-ubuntu--lv)<br>
 Run sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv to resize the filesystem<br>
+
 ````
+sudo cfdisk y resize la particion
+sudo pvresize /dev/sda3
 sudo lvdisplay
-sudo lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv
-sudo resize2fs /dev/mapper/ubuntu--vg-ubuntu--lv
+sudo lvextend -l +100%FREE /dev/vg0/lv-0
+sudo resize2fs /dev/mapper/vg0-lv--0
 ````
 <br>
 Run again df -h and you should now see that your volume has been extended<br>
