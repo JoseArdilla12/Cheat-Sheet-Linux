@@ -49,7 +49,7 @@ network:
 
 To apply the new Netplan changes execute:
 ````
-sudo netplan apply
+sudo netplan try
 ````
 
 If problems present:
