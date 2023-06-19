@@ -92,6 +92,8 @@ alias p="ps aux | grep "
 alias f="find . | grep "
 alias ping='ping -c 4'
 
+alias pacman='sudo pacman'
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
