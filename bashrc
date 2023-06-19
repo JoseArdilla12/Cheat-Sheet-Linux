@@ -93,6 +93,7 @@ alias f="find . | grep "
 alias ping='ping -c 4'
 
 alias pacman='sudo pacman'
+alias docker='sudo docker'
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
