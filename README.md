@@ -58,4 +58,17 @@ sudo netplan --debug apply
 ````
 <br>
 
+DNS Issues:
+However on Ubuntu systemd-resolve uses port 53 by default.
+That port needs to be available for port binding for PiHole. To solve this:
+````
+vi /etc/systemd/resolved.conf
+````
+Uncomment and change to no (everything is commented out by default):
+````
+DNSStubListener=no
+````
+Restart the service.
+
+
 
